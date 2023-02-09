@@ -39,6 +39,12 @@ yarn dev
 yarn build
 ```
 
+### Deploy to github pages
+
+```sh
+yarn deploy
+```
+
 ### Run Unit Tests with [Vitest](https://vitest.dev/)
 
 ```sh
