@@ -1,1 +1,0 @@
-import{_ as c,o as e,c as t,a,d as o,b as _}from"./index-8d8bfde9.js";const r={},i=a("h1",null,"teste",-1),d=[i];function l(n,s){return e(),t("div",null,d)}const m=c(r,[["render",l]]),p=o({__name:"TestView",setup(n){return(s,u)=>(e(),t("main",null,[_(m)]))}});export{p as default};
