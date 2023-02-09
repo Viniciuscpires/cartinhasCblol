@@ -39,7 +39,7 @@ yarn dev
 yarn build
 ```
 
-### Deploy to github pages
+### Deploy to github pages [link](https://viniciuscpires.github.io/cartinhasCblol/)
 
 ```sh
 yarn deploy
