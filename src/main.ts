@@ -1,14 +1,16 @@
-import { createApp } from "vue";
-import { createPinia } from "pinia";
+import { createApp } from 'vue'
 
-import App from "./App.vue";
-import router from "./router";
+// Vuetify
+import 'vuetify/styles'
 
-import "./style.css";
+import App from './App.vue'
+import './style.css'
 
-const app = createApp(App);
+// Plugins
+import { registerPlugins } from '@/plugins'
 
-app.use(createPinia());
-app.use(router);
+const app = createApp(App)
 
-app.mount("#app");
+registerPlugins(app)
+
+app.mount('#app')

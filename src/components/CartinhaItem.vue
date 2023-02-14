@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import RoleIcon from "./RoleIcon.vue";
-import { getCountryById } from "../utils/countryList";
-import { teamImgs } from "@/utils/enums";
+import RoleIcon from './RoleIcon.vue'
+import { getCountryById } from '../utils/countryList'
+import { teamImgs, teamsInfo } from '@/utils/enums'
+import { ref } from 'vue'
 
 const props = defineProps({
   value: { type: String, required: true },
@@ -10,7 +11,16 @@ const props = defineProps({
   nick: { type: String, required: true },
   name: { type: String, required: true },
   role: { type: String, required: true },
-});
+})
+
+const playerInfo = teamsInfo[props.team].players.find(
+  (player) => player.summonerName === props.nick
+)
+
+const playerImage = ref(
+  playerInfo?.image ??
+    'http://static.lolesports.com/players/1671133852195_placeholder.png'
+)
 </script>
 
 <template>
@@ -25,8 +35,7 @@ const props = defineProps({
         <div
           class="w-full h-[18rem] bg-no-repeat bg-cover bg-bottom rounded-xl absolute bottom-0"
           :style="{
-            backgroundImage:
-              'url(https://am-a.akamaihd.net/image?resize=750:&f=http%3A%2F%2Fstatic.lolesports.com%2Fplayers%2F1674158911148_Makes-1copy.png)',
+            backgroundImage: `url(${playerImage})`,
           }"
         ></div>
         <div
@@ -38,7 +47,7 @@ const props = defineProps({
           >
             <span class="text-5xl">{{ props.value }}</span>
             <span class="text-4xl">{{
-              getCountryById(props.countryId || "1")?.flag
+              getCountryById(props.countryId || '1')?.flag
             }}</span>
             <span>
               <img :src="teamImgs[props.team].icon" class="w-8 h-8" />
