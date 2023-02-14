@@ -24,43 +24,43 @@ const playerImage = ref(
 </script>
 
 <template>
-  <div class="w-[16rem] h-[20rem]">
+  <div class="tw-w-[16rem] tw-h-[20rem]">
     <div
-      class="w-full h-full border-4 border-solid border-green-400 rounded-x bg-contain"
+      class="tw-w-full tw-h-full tw-border-4 tw-border-solid tw-border-green-400 tw-rounded-x tw-bg-contain"
       :style="{
         backgroundImage: `url(${teamImgs[props.team].background})`,
       }"
     >
-      <div class="w-full h-full rounded-xl relative">
+      <div class="tw-w-full tw-h-full tw-rounded-xl tw-relative">
         <div
-          class="w-full h-[18rem] bg-no-repeat bg-cover bg-bottom rounded-xl absolute bottom-0"
+          class="tw-w-full tw-h-[18rem] tw-bg-no-repeat tw-bg-cover tw-bg-bottom tw-rounded-xl tw-absolute tw-bottom-0"
           :style="{
             backgroundImage: `url(${playerImage})`,
           }"
         ></div>
         <div
-          class="relative w-full h-full bg-gradient-to-b from-transparent via-transparent to-gray-800 text-white text-xl font-semibold tracking-wide uppercase rounded-lg"
+          class="tw-relative tw-w-full tw-h-full tw-bg-gradient-to-b tw-from-transparent tw-via-transparent tw-to-gray-800 tw-text-white tw-text-xl tw-font-semibold tw-tracking-wide tw-uppercase tw-rounded-lg"
           style="text-shadow: 0rem 0 0.1rem #000"
         >
           <div
-            class="card-value absolute top-4 left-4 flex flex-col justify-center"
+            class="tw-card-value tw-absolute tw-top-4 tw-left-4 tw-flex tw-flex-col tw-justify-center"
           >
-            <span class="text-5xl">{{ props.value }}</span>
-            <span class="text-4xl">{{
+            <span class="tw-text-5xl">{{ props.value }}</span>
+            <span class="tw-text-4xl">{{
               getCountryById(props.countryId || '1')?.flag
             }}</span>
             <span>
-              <img :src="teamImgs[props.team].icon" class="w-8 h-8" />
+              <img :src="teamImgs[props.team].icon" class="tw-w-8 tw-h-8" />
             </span>
           </div>
           <div
-            class="w-full absolute top-3/4 left-1/2 -translate-x-1/2 mb-4 -translate-y-4"
+            class="tw-w-full tw-absolute tw-top-3/4 tw-left-1/2 tw--translate-x-1/2 tw-mb-4 tw--translate-y-4"
           >
-            <div class="flex flex-col justify-center text-center">
-              <span class="text-3xl">{{ props.nick }}</span>
-              <span class="text-xs text-gray-400">{{ props.name }}</span>
-              <span class="self-center">
-                <role-icon :name="props.role" class="w-8 h-8" />
+            <div class="tw-flex tw-flex-col tw-justify-center tw-text-center">
+              <span class="tw-text-3xl">{{ props.nick }}</span>
+              <span class="tw-text-xs tw-text-gray-400">{{ props.name }}</span>
+              <span class="tw-self-center">
+                <role-icon :name="props.role" class="tw-w-8 tw-h-8" />
               </span>
             </div>
           </div>

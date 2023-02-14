@@ -1359,3 +1359,173 @@ export const teamsInfo: { [k: string]: TeamInfo } = {
     ],
   },
 }
+
+export const standings = [
+  {
+    ordinal: 1,
+    teams: [
+      {
+        id: '109480204628225868',
+        slug: 'los-grandes',
+        name: 'Los Grandes',
+        code: 'LOS',
+        image:
+          'http://static.lolesports.com/teams/1671220578076_LOSGRANDES1.png',
+        record: {
+          wins: 7,
+          losses: 1,
+        },
+      },
+    ],
+  },
+  {
+    ordinal: 2,
+    teams: [
+      {
+        id: '99566408221961358',
+        slug: 'red-kalunga',
+        name: 'RED Kalunga',
+        code: 'RED',
+        image:
+          'http://static.lolesports.com/teams/1631820575924_red-2021-worlds.png',
+        record: {
+          wins: 6,
+          losses: 2,
+        },
+      },
+    ],
+  },
+  {
+    ordinal: 3,
+    teams: [
+      {
+        id: '99566408221114231',
+        slug: 'kabum-esports',
+        name: 'KaBuM! Esports',
+        code: 'KBM',
+        image:
+          'http://static.lolesports.com/teams/1671197541491_LOGO-KABUM-ESPORTS-2023-NEGATIVO-FUNDOPRETO.png',
+        record: {
+          wins: 5,
+          losses: 3,
+        },
+      },
+    ],
+  },
+  {
+    ordinal: 4,
+    teams: [
+      {
+        id: '105397404796640412',
+        slug: 'loud',
+        name: 'LOUD',
+        code: 'LLL',
+        image:
+          'http://static.lolesports.com/teams/Logo-LOUD-Esports_Original.png',
+        record: {
+          wins: 4,
+          losses: 4,
+        },
+      },
+    ],
+  },
+  {
+    ordinal: 5,
+    teams: [
+      {
+        id: '109480056092207899',
+        slug: 'fluxo',
+        name: 'FLUXO',
+        code: 'FX',
+        image:
+          'http://static.lolesports.com/teams/1670539056915_fluxo_escudo_w.png',
+        record: {
+          wins: 4,
+          losses: 4,
+        },
+      },
+    ],
+  },
+  {
+    ordinal: 6,
+    teams: [
+      {
+        id: '99566408222831088',
+        slug: 'liberty',
+        name: 'Liberty',
+        code: 'LBR',
+        image: 'http://static.lolesports.com/teams/1643305707691_RXfNcFMU.png',
+        record: {
+          wins: 4,
+          losses: 4,
+        },
+      },
+    ],
+  },
+  {
+    ordinal: 7,
+    teams: [
+      {
+        id: '99566408217116828',
+        slug: 'intz',
+        name: 'INTZ',
+        code: 'ITZ',
+        image:
+          'http://static.lolesports.com/teams/1643056732785_INTZ_Logo_Principal_2022.png',
+        record: {
+          wins: 3,
+          losses: 5,
+        },
+      },
+    ],
+  },
+  {
+    ordinal: 8,
+    teams: [
+      {
+        id: '100205576309502431',
+        slug: 'furia',
+        name: 'FURIA',
+        code: 'FUR',
+        image: 'http://static.lolesports.com/teams/FURIA---black.png',
+        record: {
+          wins: 3,
+          losses: 5,
+        },
+      },
+    ],
+  },
+  {
+    ordinal: 9,
+    teams: [
+      {
+        id: '99566408217955692',
+        slug: 'pain-gaming',
+        name: 'paiN Gaming',
+        code: 'PNG',
+        image:
+          'http://static.lolesports.com/teams/1674657011011_pain_logo_white.png',
+        record: {
+          wins: 3,
+          losses: 5,
+        },
+      },
+    ],
+  },
+  {
+    ordinal: 10,
+    teams: [
+      {
+        id: '99566408219409348',
+        slug: 'vivo-keyd',
+        name: 'Vivo Keyd Stars',
+        code: 'VKS',
+        image: 'http://static.lolesports.com/teams/1670542079678_vks.png',
+        record: {
+          wins: 1,
+          losses: 7,
+        },
+      },
+    ],
+  },
+]

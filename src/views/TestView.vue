@@ -3,7 +3,7 @@ import CartinhaItem from '../components/CartinhaItem.vue'
 </script>
 
 <template>
-  <main class="p-16">
+  <main class="tw-p-16">
     <CartinhaItem
       value="80"
       countryId="1"
@@ -13,7 +13,7 @@ import CartinhaItem from '../components/CartinhaItem.vue'
       role="Top"
     />
 
-    <div class="w-64 mt-16">
+    <div class="tw-w-64 tw-mt-16">
       <img src="../assets/cartinha_exemplo.jpeg" />
     </div>
   </main>
