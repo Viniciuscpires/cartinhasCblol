@@ -1,10 +1,4 @@
-interface RoleNames {
-  top: string
-  jungle: string
-  mid: string
-  bot: string
-  support: string
-}
+import type { RoleNames, TeamImgs, TeamInfo } from '@/utils/types'
 
 export const roleNames: RoleNames = {
   top: 'Top',
@@ -12,13 +6,6 @@ export const roleNames: RoleNames = {
   mid: 'Mid',
   bot: 'Bot',
   support: 'Support',
-}
-
-interface TeamImgs {
-  [k: string]: {
-    icon: string
-    background: string
-  }
 }
 
 export const teamImgs: TeamImgs = {
@@ -70,33 +57,8 @@ export const teamImgs: TeamImgs = {
   },
 }
 
-interface Player {
-  id: string
-  summonerName: string
-  firstName: string
-  lastName: string
-  image: string
-  role: string
-}
-
-interface TeamInfo {
-  id: string
-  slug: string
-  name: string
-  code: string
-  image: string
-  alternativeImage?: string | null
-  backgroundImage?: string | null
-  status: string
-  homeLeague: {
-    name: string
-    region: string
-  }
-  players: Array<Player>
-}
-
 export const teamsInfo: { [k: string]: TeamInfo } = {
-  redKalunga: {
+  'red-kalunga': {
     id: '99566408221961358',
     slug: 'red-kalunga',
     name: 'RED Kalunga',
@@ -221,7 +183,7 @@ export const teamsInfo: { [k: string]: TeamInfo } = {
       },
     ],
   },
-  losGrandes: {
+  'los-grandes': {
     id: '109480204628225868',
     slug: 'los-grandes',
     name: 'Los Grandes',
@@ -470,7 +432,7 @@ export const teamsInfo: { [k: string]: TeamInfo } = {
       },
     ],
   },
-  kabum: {
+  'kabum-esports': {
     id: '99566408221114231',
     slug: 'kabum-esports',
     name: 'KaBuM! Esports',
@@ -982,7 +944,7 @@ export const teamsInfo: { [k: string]: TeamInfo } = {
       },
     ],
   },
-  pain: {
+  'pain-gaming': {
     id: '99566408217955692',
     slug: 'pain-gaming',
     name: 'paiN Gaming',
@@ -1232,7 +1194,7 @@ export const teamsInfo: { [k: string]: TeamInfo } = {
       },
     ],
   },
-  keyd: {
+  'vivo-keyd': {
     id: '99566408219409348',
     slug: 'vivo-keyd',
     name: 'Vivo Keyd Stars',

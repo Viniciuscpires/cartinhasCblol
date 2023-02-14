@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import RoleIcon from './RoleIcon.vue'
-import { getCountryById } from '../utils/countryList'
+import { getCountryById } from '@/utils/countryList'
 import { teamImgs, teamsInfo } from '@/utils/enums'
 import { ref } from 'vue'
+import playerPlaceholder from '@/assets/player_placeholder.png'
 
 const props = defineProps({
   value: { type: String, required: true },
@@ -18,22 +19,25 @@ const playerInfo = teamsInfo[props.team].players.find(
 )
 
 const playerImage = ref(
-  playerInfo?.image ??
-    'http://static.lolesports.com/players/1671133852195_placeholder.png'
+  playerInfo?.image.indexOf('placeholder') !== -1 ||
+    playerInfo?.image.indexOf('Luskka') !== -1 ||
+    playerInfo?.image.indexOf('Silhueta') !== -1
+    ? playerPlaceholder
+    : playerInfo?.image
 )
 </script>
 
 <template>
-  <div class="tw-w-[16rem] tw-h-[20rem]">
+  <div class="tw-w-[12rem] tw-h-[16rem]">
     <div
-      class="tw-w-full tw-h-full tw-border-4 tw-border-solid tw-border-green-400 tw-rounded-x tw-bg-contain"
+      class="tw-w-full tw-h-full tw-border-4 tw-border-solid tw-border-green-400 tw-rounded-x tw-bg-cover"
       :style="{
         backgroundImage: `url(${teamImgs[props.team].background})`,
       }"
     >
       <div class="tw-w-full tw-h-full tw-rounded-xl tw-relative">
         <div
-          class="tw-w-full tw-h-[18rem] tw-bg-no-repeat tw-bg-cover tw-bg-bottom tw-rounded-xl tw-absolute tw-bottom-0"
+          class="tw-w-full tw-h-[14rem] tw-bg-no-repeat tw-bg-cover tw-bg-bottom tw-rounded-xl tw-absolute tw-bottom-0"
           :style="{
             backgroundImage: `url(${playerImage})`,
           }"
@@ -45,8 +49,8 @@ const playerImage = ref(
           <div
             class="tw-card-value tw-absolute tw-top-4 tw-left-4 tw-flex tw-flex-col tw-justify-center"
           >
-            <span class="tw-text-5xl">{{ props.value }}</span>
-            <span class="tw-text-4xl">{{
+            <span class="tw-text-4xl">{{ props.value }}</span>
+            <span class="tw-text-3xl">{{
               getCountryById(props.countryId || '1')?.flag
             }}</span>
             <span>
@@ -56,11 +60,14 @@ const playerImage = ref(
           <div
             class="tw-w-full tw-absolute tw-top-3/4 tw-left-1/2 tw--translate-x-1/2 tw-mb-4 tw--translate-y-4"
           >
-            <div class="tw-flex tw-flex-col tw-justify-center tw-text-center">
-              <span class="tw-text-3xl">{{ props.nick }}</span>
+            <div
+              class="tw-flex tw-flex-col tw-justify-center tw-items-center tw-text-center"
+            >
+              <span class="tw-text-xl">{{ props.nick }}</span>
+              <div class="tw-w-1/4"><hr class="tw-border-gray-400" /></div>
               <span class="tw-text-xs tw-text-gray-400">{{ props.name }}</span>
               <span class="tw-self-center">
-                <role-icon :name="props.role" class="tw-w-8 tw-h-8" />
+                <role-icon :name="props.role" class="tw-w-6 tw-h-6" />
               </span>
             </div>
           </div>

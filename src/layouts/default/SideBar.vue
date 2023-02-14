@@ -24,7 +24,9 @@
           :value="teamItem.value"
           active-color="primary"
           :to="`/team/${teamItem.value}`"
-          :style="{ 'padding-inline-start': '2rem !important' }"
+          :style="{
+            'padding-inline-start': '2rem !important',
+          }"
         >
           <template v-slot:prepend>
             <v-avatar
@@ -64,5 +66,15 @@ Object.keys(teamsInfo).forEach((teamKey) => {
       prependAvatar: teamsInfo[teamKey].image,
     },
   })
+})
+
+teamsList.value.sort((a, b) => {
+  if (a.title < b.title) {
+    return -1
+  }
+  if (a.title > b.title) {
+    return 1
+  }
+  return 0
 })
 </script>

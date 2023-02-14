@@ -14,7 +14,7 @@ import CartinhaItem from '../components/CartinhaItem.vue'
     />
 
     <div class="tw-w-64 tw-mt-16">
-      <img src="../assets/cartinha_exemplo.jpeg" />
+      <img src="/cartinha_exemplo.jpeg" />
     </div>
   </main>
 </template>

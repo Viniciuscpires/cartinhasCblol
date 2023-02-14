@@ -11,19 +11,9 @@
       </router-link>
     </v-app-bar-title>
 
-    <v-btn icon to="Teams">
+    <v-btn icon to="/teams">
       <v-icon> mdi-account-group </v-icon>
       <v-tooltip activator="parent" location="bottom"> Teams </v-tooltip>
-    </v-btn>
-
-    <v-btn icon>
-      <v-icon> mdi-magnify </v-icon>
-      <v-tooltip activator="parent" location="bottom"> Search </v-tooltip>
-    </v-btn>
-
-    <v-btn icon>
-      <v-icon> mdi-dots-vertical </v-icon>
-      <v-tooltip activator="parent" location="bottom"> More options </v-tooltip>
     </v-btn>
   </v-app-bar>
 </template>
