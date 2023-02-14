@@ -1,4 +1,4 @@
-import type { RoleNames, TeamImgs, TeamInfo } from '@/utils/types'
+import type { RoleNames, TeamImgs, TeamInfo, Standing } from '@/utils/types'
 
 export const roleNames: RoleNames = {
   top: 'Top',
@@ -1322,9 +1322,10 @@ export const teamsInfo: { [k: string]: TeamInfo } = {
   },
 }
 
-export const standings = [
+export const standings: Array<Standing> = [
   {
     ordinal: 1,
+    cards: 89,
     teams: [
       {
         id: '109480204628225868',
@@ -1342,6 +1343,7 @@ export const standings = [
   },
   {
     ordinal: 2,
+    cards: 88,
     teams: [
       {
         id: '99566408221961358',
@@ -1359,6 +1361,7 @@ export const standings = [
   },
   {
     ordinal: 3,
+    cards: 86,
     teams: [
       {
         id: '99566408221114231',
@@ -1376,6 +1379,7 @@ export const standings = [
   },
   {
     ordinal: 4,
+    cards: 84,
     teams: [
       {
         id: '105397404796640412',
@@ -1393,6 +1397,7 @@ export const standings = [
   },
   {
     ordinal: 5,
+    cards: 84,
     teams: [
       {
         id: '109480056092207899',
@@ -1410,6 +1415,7 @@ export const standings = [
   },
   {
     ordinal: 6,
+    cards: 80,
     teams: [
       {
         id: '99566408222831088',
@@ -1426,6 +1432,7 @@ export const standings = [
   },
   {
     ordinal: 7,
+    cards: 81,
     teams: [
       {
         id: '99566408217116828',
@@ -1443,6 +1450,7 @@ export const standings = [
   },
   {
     ordinal: 8,
+    cards: 82,
     teams: [
       {
         id: '100205576309502431',
@@ -1459,6 +1467,7 @@ export const standings = [
   },
   {
     ordinal: 9,
+    cards: 77,
     teams: [
       {
         id: '99566408217955692',
@@ -1476,6 +1485,7 @@ export const standings = [
   },
   {
     ordinal: 10,
+    cards: 68,
     teams: [
       {
         id: '99566408219409348',

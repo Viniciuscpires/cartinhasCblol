@@ -30,10 +30,20 @@ export interface TeamInfo {
   image: string
   alternativeImage?: string | null
   backgroundImage?: string | null
-  status: string
-  homeLeague: {
+  status?: string
+  homeLeague?: {
     name: string
     region: string
   }
-  players: Array<Player>
+  players?: Array<Player>
+  record?: {
+    wins: number
+    losses: number
+  }
+}
+
+export interface Standing {
+  ordinal: number
+  cards: number
+  teams: Array<TeamInfo>
 }
