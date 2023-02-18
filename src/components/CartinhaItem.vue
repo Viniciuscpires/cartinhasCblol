@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import RoleIcon from './RoleIcon.vue'
 import { getCountryById } from '@/utils/countryList'
-import { teamImgs, teamsInfo } from '@/utils/enums'
+import { teamImgs } from '@/utils/enums'
 import { ref } from 'vue'
 import playerPlaceholder from '@/assets/player_placeholder.png'
 
@@ -14,17 +14,19 @@ const props = defineProps({
   role: { type: String, required: true },
 })
 
-const playerInfo = teamsInfo[props.team].players.find(
-  (player) => player.summonerName === props.nick
-)
+// const playerInfo = teamsInfo[props.team].players?.find(
+//   (player) => player.summonerName === props.nick
+// )
 
-const playerImage = ref(
-  playerInfo?.image.indexOf('placeholder') !== -1 ||
-    playerInfo?.image.indexOf('Luskka') !== -1 ||
-    playerInfo?.image.indexOf('Silhueta') !== -1
-    ? playerPlaceholder
-    : playerInfo?.image
-)
+// const playerImage = ref(
+//   playerInfo?.image.indexOf('placeholder') !== -1 ||
+//     playerInfo?.image.indexOf('Luskka') !== -1 ||
+//     playerInfo?.image.indexOf('Silhueta') !== -1
+//     ? playerPlaceholder
+//     : playerInfo?.image
+// )
+
+const playerImage = ref(playerPlaceholder)
 </script>
 
 <template>
