@@ -1,5 +1,5 @@
 {
-  "standings": {
+  "Standings": {
     "_": {
       "data": {
         "standings": [
@@ -415,7 +415,7 @@
       }
     }
   },
-  "teams": {
+  "Teams": {
     "_": {
       "data": {
         "los-grandes": {
@@ -1717,7 +1717,7 @@
       }
     }
   },
-  "lineup": {
+  "Lineup": {
     "_": {
       "data": {
         "los-grandes": {
@@ -1853,7 +1853,7 @@
       }
     }
   },
-  "cards": {
+  "Cards": {
     "_": {
       "data": {
         "los-grandes": {
