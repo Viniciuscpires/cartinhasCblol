@@ -1771,9 +1771,9 @@
             "8": {
               "top": "Robo",
               "jungle": "Croc",
-              "mid": "YURI",
-              "bottom": "tinowns",
-              "support": "Route",
+              "mid": "tinowns",
+              "bottom": "Route",
+              "support": "Ceos",
               "coach": "Beellzy"
             }
           }
@@ -1859,12 +1859,12 @@
         "los-grandes": {
           "cblol": {
             "8": {
-              "HiRit": "",
-              "Ranger": "",
-              "Lava": "",
-              "Netuno": "",
-              "zay": "",
-              "Stardust": ""
+              "HiRit": "93",
+              "Ranger": "91",
+              "Lava": "90",
+              "Netuno": "91",
+              "zay": "86",
+              "Stardust": "92"
             }
           },
           "cblol-academy": {
@@ -1880,108 +1880,108 @@
         "red-kalunga": {
           "cblol": {
             "8": {
-              "Boal": "",
-              "Aegis": "",
-              "Avenger": "",
-              "TitaN": "",
-              "Kuri": "",
-              "Coelho": ""
+              "Boal": "84",
+              "Aegis": "91",
+              "Avenger": "82",
+              "TitaN": "92",
+              "Kuri": "91",
+              "Coelho": "86"
             }
           }
         },
         "kabum-esports": {
           "cblol": {
             "8": {
-              "Lonely": "",
-              "SCARY": "",
-              "YURI": "",
-              "DudsTheBoy": "",
-              "scuro": "",
-              "TioBen": ""
+              "Lonely": "92",
+              "SCARY": "85",
+              "YURI": "85",
+              "DudsTheBoy": "83",
+              "scuro": "84",
+              "TioBen": "88"
             }
           }
         },
         "loud": {
           "cblol": {
             "8": {
-              "Robo": "",
-              "Croc": "",
-              "YURI": "",
-              "tinowns": "",
-              "Route": "",
-              "Beellzy": ""
+              "Robo": "77",
+              "Croc": "76",
+              "tinowns": "85",
+              "Route": "81",
+              "Ceos": "84",
+              "Beellzy": "70"
             }
           }
         },
         "fluxo": {
           "cblol": {
             "8": {
-              "Tay": "",
-              "Disamis": "",
-              "hauz": "",
-              "Brance": "",
-              "JoJo": "",
-              "Turtle": ""
+              "Tay": "78",
+              "Disamis": "83",
+              "hauz": "86",
+              "Brance": "82",
+              "JoJo": "81",
+              "Turtle": "68"
             }
           }
         },
         "liberty": {
           "cblol": {
             "8": {
-              "Kiari": "",
-              "accez": "",
-              "Piloto": "",
-              "Juliera": "",
-              "Cavalo": "",
-              "Alocs": ""
+              "Kiari": "73",
+              "accez": "79",
+              "Piloto": "70",
+              "Juliera": "76",
+              "Cavalo": "74",
+              "Alocs": "81"
             }
           }
         },
         "intz": {
           "cblol": {
             "8": {
-              "Zzk": "",
-              "Yampi": "",
-              "NOsFerus": "",
-              "NinjaKiwi": "",
-              "Nia": "",
-              "Aoshi": ""
+              "Zzk": "77",
+              "Yampi": "77",
+              "NOsFerus": "76",
+              "NinjaKiwi": "76",
+              "Nia": "73",
+              "Aoshi": "76"
             }
           }
         },
         "furia": {
           "cblol": {
             "8": {
-              "fNb": "",
-              "Goot": "",
-              "Envy": "",
-              "Trigo": "",
-              "RedBert": "",
-              "Maestro": ""
+              "fNb": "72",
+              "Goot": "79",
+              "Envy": "70",
+              "Trigo": "83",
+              "RedBert": "77",
+              "Maestro": "70"
             }
           }
         },
         "pain-gaming": {
           "cblol": {
             "8": {
-              "Wizer": "",
-              "CarioK": "",
-              "dyNquedo": "",
-              "Bvoy": "",
-              "Damage": "",
-              "Dionrray": ""
+              "Wizer": "72",
+              "CarioK": "66",
+              "dyNquedo": "79",
+              "Bvoy": "80",
+              "Damage": "65",
+              "Xero": "72"
             }
           }
         },
         "vivo-keyd": {
           "cblol": {
             "8": {
-              "GUIGO": "",
-              "Sting": "",
-              "Grevthar": "",
-              "ST3PZ": "",
-              "Krastyel": "",
-              "Kalec": ""
+              "GUIGO": "72",
+              "Sting": "58",
+              "Grevthar": "69",
+              "ST3PZ": "50",
+              "Krastyel": "56",
+              "Kalec": "64"
             }
           }
         }
