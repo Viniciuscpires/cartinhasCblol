@@ -1,1 +1,0 @@
-import{_ as a}from"./_plugin-vue_export-helper-c27b6911.js";import{a2 as r,ab as t,ad as o}from"./index-1f3cd34c.js";const n={};function s(e,c){return r(),t("h1",null,"single team view - "+o(e.$route.params.teamSlug),1)}const l=a(n,[["render",s]]);export{l as default};
