@@ -1,1 +1,0 @@
-import{_ as e}from"./_plugin-vue_export-helper-c27b6911.js";import{Y as r,a5 as t}from"./index-339cf114.js";const c={};function o(a,n){return r(),t("h1",null,"teams view")}const m=e(c,[["render",o]]);export{m as default};
