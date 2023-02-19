@@ -42,8 +42,11 @@ export interface TeamInfo {
   }
 }
 
-export interface Standing {
-  ordinal: number
+export interface Standing extends StandingInfo {
   cards: number
+}
+
+export interface StandingInfo {
+  ordinal: number
   teams: Array<TeamInfo>
 }

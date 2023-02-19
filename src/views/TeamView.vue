@@ -9,20 +9,17 @@ import type { TeamSlug } from '@/stores/types/teamInfo'
 const route = useRoute()
 const teamInfoStore = useTeamInfoStore()
 const { processTeamInfo } = teamInfoStore
-const { teamState, playersInfoCardsFromLineup } = storeToRefs(teamInfoStore)
+const { playersInfoCardsFromLineup } = storeToRefs(teamInfoStore)
 
 processTeamInfo(`${route.params.teamSlug}` as TeamSlug)
-console.log('playersInfoCardsFromLineup', playersInfoCardsFromLineup)
 
 watch(route, (newRoute) => {
   processTeamInfo(`${newRoute.params.teamSlug}` as TeamSlug)
-  console.log('playersInfoCardsFromLineup', playersInfoCardsFromLineup)
 })
 </script>
 
 <template>
-  {{ teamState.teamInfo.slug }}
-  <div class="tw-flex tw-flex-row tw-flex-wrap tw-gap-4">
+  <div class="tw-flex tw-flex-row tw-flex-wrap tw-gap-4 tw-p-4">
     <cartinha-item
       v-for="teamMembers in playersInfoCardsFromLineup"
       :key="teamMembers.summonerName"

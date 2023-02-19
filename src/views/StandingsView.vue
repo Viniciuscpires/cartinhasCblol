@@ -1,41 +1,26 @@
 <script setup lang="ts">
-import { ref, computed, type Ref, watch } from 'vue'
-import { standings } from '@/utils/enums'
-import type { Standing } from '@/utils/types'
+import { computed, watch } from 'vue'
+import { storeToRefs } from 'pinia'
 
-const state = ref({
-  startSortingType: 'ordinal' as 'ordinal' | 'cards',
-  orderedStandings: [] as Array<Standing>,
-})
+import { useStandingsStore } from '@/stores/standings'
+
+const standingsStore = useStandingsStore()
+
+const { sortStandings } = standingsStore
+const { standingsState } = storeToRefs(standingsStore)
 
 const sortingType = computed({
   get() {
-    return state.value.startSortingType
+    return standingsState.value.sortingType
   },
   set(newValue) {
-    state.value.startSortingType = newValue
+    standingsState.value.sortingType = newValue
   },
 })
 
-watch(sortingType, (newSortingType) => {
-  sortStandings(newSortingType)
+watch(sortingType, () => {
+  sortStandings()
 })
-
-const sortStandings = (sortingTypeStr: 'ordinal' | 'cards') => {
-  state.value.orderedStandings = [
-    ...standings.sort((a: Standing, b: Standing) => {
-      if (a[sortingTypeStr] < b[sortingTypeStr]) {
-        return sortingTypeStr === 'ordinal' ? -1 : 1
-      }
-      if (a[sortingTypeStr] > b[sortingTypeStr]) {
-        return sortingTypeStr === 'ordinal' ? 1 : -1
-      }
-      return 0
-    }),
-  ]
-}
-
-sortStandings(sortingType.value)
 </script>
 
 <template>
@@ -60,7 +45,7 @@ sortStandings(sortingType.value)
     </v-btn-toggle>
     <v-list lines="two">
       <v-list-item
-        v-for="teamItem in state.orderedStandings"
+        v-for="teamItem in standingsState.standings"
         :key="teamItem.teams[0].slug"
         :value="teamItem.teams[0].slug"
         :to="`/team/${teamItem.teams[0].slug}`"
