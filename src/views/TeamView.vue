@@ -1,37 +1,39 @@
 <script setup lang="ts">
-import { ref, watch } from 'vue'
+import { watch } from 'vue'
 import { useRoute } from 'vue-router'
-import { teamsInfo } from '@/utils/enums'
-import type { TeamInfo } from '@/utils/types'
+import { storeToRefs } from 'pinia'
 import CartinhaItem from '@/components/CartinhaItem.vue'
+import { useTeamInfoStore } from '@/stores/teamInfo'
+import type { TeamSlug } from '@/stores/types/teamInfo'
 
 const route = useRoute()
-const state = ref({
-  teamInfo: {} as TeamInfo,
-})
+const teamInfoStore = useTeamInfoStore()
+const { processTeamInfo } = teamInfoStore
+const { teamState, playersInfoCardsFromLineup } = storeToRefs(teamInfoStore)
 
-const updateTeamInfo = (teamSlug: string) => {
-  state.value.teamInfo = teamsInfo[teamSlug]
-}
-updateTeamInfo(`${route.params.teamSlug}`)
+processTeamInfo(`${route.params.teamSlug}` as TeamSlug)
+console.log('playersInfoCardsFromLineup', playersInfoCardsFromLineup)
 
 watch(route, (newRoute) => {
-  updateTeamInfo(`${newRoute.params.teamSlug}`)
+  processTeamInfo(`${newRoute.params.teamSlug}` as TeamSlug)
+  console.log('playersInfoCardsFromLineup', playersInfoCardsFromLineup)
 })
 </script>
 
 <template>
-  {{ state.teamInfo.slug }}
+  {{ teamState.teamInfo.slug }}
   <div class="tw-flex tw-flex-row tw-flex-wrap tw-gap-4">
     <cartinha-item
-      v-for="teamMembers in state.teamInfo.players"
+      v-for="teamMembers in playersInfoCardsFromLineup"
       :key="teamMembers.summonerName"
-      value="80"
-      countryId="1"
-      :team="state.teamInfo.slug"
-      :nick="teamMembers.summonerName"
-      :name="`${teamMembers.firstName} ${teamMembers.lastName}`"
+      :value="teamMembers.value"
+      :countryFlag="teamMembers.countryFlag"
+      :summonerName="teamMembers.summonerName"
+      :fullName="teamMembers.fullName"
       :role="teamMembers.role"
+      :image="teamMembers.image"
+      :teamIcon="teamMembers.teamIcon"
+      :teamBackground="teamMembers.teamBackground"
     />
   </div>
 </template>
